@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 100%;
+    background-color: #fff;
+    color: #444;
+}
+
+input {
+    padding: 5px 8px;
+    color: currentColor;
+    border: 1px solid #ddd;    
+}
+
+button {
+    border: none;
+    background-color: rgb(160, 62, 160);
+    color: #fff;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 2px;
+}
+
+button:hover {
+    background-color: rgb(143, 51, 143);    
+}
+
+button[disabled],
+a[disabled],
+.btn[disabled] {
+    opacity: .5;
+    cursor: no-drop;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.main {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #faf3fa;
+}
+
+@media (min-width: 500px) {
+
+    .main {
+        max-width: 500px;
+        margin: 0 auto;
+        border: 1px solid #a03ea0;
+    }
+}
+
+.main-header {
+    background-color: rgb(160, 62, 160);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-content {
+    padding: 20px;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-new {
+    border-radius: 5px;
+    display: flex;
+    padding: 20px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,.1);
+    background-color: #fff;
+}
+
+.task-new input {
+    flex: 1;
+    margin-right: 10px;
+    font-size: 1rem;
+    padding: 8px;
+}
+
+.tasks-container {
+    margin-top: 10px;
+    /* box-shadow: 0 0 3px rgba(0,0,0,.1); */
+    flex: 1;
+    overflow-y: auto;
+}
+
+.task {
+    position: relative;
+    display: flex;
+    /* border: 1px solid #ddd; */
+    padding: 20px;
+    background-color: #fff;
+    transition: background-color .4s ease;
+    box-shadow: 0 0 3px rgba(0,0,0,.2);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.task:hover {
+    background-color: #eaeaea;
+}
+
+
+.task .area-2  {
+    position: absolute;
+    display: none;
+    top: 1.2rem;
+    right: 1.2rem;
+}
+
+.task:hover .area-2 {
+    display: block;
+}
+
+.task .area-2 .fa-trash {
+    cursor: pointer;
+    color: rgb(226, 58, 58);
+}
+
+.task [type="checkbox"] {
+    transform: scale(1.5);margin: 0 10px;
+}
+
+.task label {
+    font-weight: bold;
+    color: #666;
+}
+
+.toast {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+}
