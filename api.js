@@ -1,5 +1,5 @@
 
-const url = 'http://localhost:5655';
+const url = 'https://inextzbgd-todo-app-api.herokuapp.com'; //'http://localhost:5655';
 
 function fetchJson(url, request) {
 
